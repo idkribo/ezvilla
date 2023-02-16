@@ -21,7 +21,24 @@ var swiperPopular = new Swiper(".popular-container", {
     prevEl: ".swiper-button-prev",
   },
 });
+
 /*=============== VALUE ACCORDION ===============*/
+const accordionItems = document.querySelectorAll(".value-accordion-item");
+
+accordionItems.forEach((item) => {
+  const accordionHeader = item.querySelector(".value-accordion-header");
+
+  accordionHeader.addEventListener("click", () => {
+    toggleItem(item);
+  });
+});
+
+const toogleItem = (item) => {
+  const accordionContent = item.querySelector(".value-accordion-content");
+
+  accordionContent.style.height = accordionContent.scrollHeight + "px";
+  item.classList.add("accordion-open");
+};
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
