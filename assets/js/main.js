@@ -121,3 +121,21 @@ themeButton.addEventListener("click", () => {
 });
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  // reset: true,
+});
+
+sr.reveal(
+  ".home-title, .popular-container, .subscribe-container, .footer-container "
+);
+sr.reveal(".home-desctiption, .footer-info", { delay: 500 });
+sr.reveal(".home-search", { delay: 600 });
+sr.reveal(".home-value", { delay: 700 });
+sr.reveal(".home-images", { delay: 800, origin: "bottom" });
+sr.reveal(".logo-img", { Interval: 100 });
+sr.reveal(".value-images, .contact-content", { origin: "left" });
+sr.reveal(".value-content, .contact-images", { origin: "right" });
