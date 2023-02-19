@@ -124,6 +124,52 @@ body.dark-theme {
     Color changes in some parts of 
     the website, in dark theme 
 ==========*/
+.dark-theme .home-search,
+.dark-theme .swiper-button-next,
+.dark-theme .swiper-button-prev {
+  border: 3px solid var(--border-color);
+}
+
+.dark-theme .nav-menu,
+.dark-theme .home-img,
+.dark-theme .popular-card:hover,
+.dark-theme .value-img,
+.dark-theme .accordion-open,
+.dark-theme .accordion-open .value-accordion-icon,
+.dark-theme .accordion-open .value-accordion-arrow,
+.dark-theme .contact-img,
+.dark-theme .contact-card-box:hover,
+.dark-theme .scrollup {
+  box-shadow: none;
+}
+
+.dark-theme .value-orbe,
+.dark-theme .value-accordion-icon,
+.dark-theme .value-accordion-arrow,
+.dark-theme .contact-orbe,
+.dark-theme .contact-card i,
+.dark-theme .contact-card-button,
+.dark-theme .subscribe-container {
+  background-color: var(--container-color);
+}
+
+.dark-theme .subscribe-container {
+  border: 6px solid var(--border-color);
+}
+
+.dark-theme .subscribe-description {
+  color: var(--text-color);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(228, 4%, 15%);
+}
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(228, 4%, 25%);
+}
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(228, 4%, 35%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -835,9 +881,332 @@ body.dark-theme {
 }
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (macx-width: 350px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
+  .section {
+    padding: 3.5rem 0 1 rem;
+  }
+
+  .home {
+    padding-bottom: 0;
+  }
+
+  .contact-card {
+    grid-template-columns: repeat(1, 180px);
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav-menu {
+    padding: 1.3rem 1.5rem;
+  }
+
+  .home-value {
+    column-gap: 1rem;
+  }
+
+  .home-img {
+    width: 220px;
+    height: 280px;
+  }
+
+  .home-orbe {
+    width: 240px;
+    height: 240px;
+  }
+
+  .logos-container {
+    gap: 2rem 1rem;
+  }
+
+  .popular-card {
+    width: 230px;
+    padding: 0.5rem 0.5rem 0.75rem;
+  }
+
+  .value-img,
+  .contact-img {
+    width: 220px;
+    height: 260px;
+  }
+
+  .value-orbe,
+  .contact-orbe {
+    width: 236px;
+    height: 289px;
+  }
+
+  .subscribe-container {
+    padding: 2rem 1rem;
+  }
+
+  .footer-content {
+    gap: 2.5rem;
+  }
+}
 /* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav-menu {
+    width: 324px;
+  }
+
+  .home-search {
+    width: 412px;
+  }
+
+  .contact-card {
+    grid-template-columns: repeat(2, 192px);
+    justify-content: center;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .home-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2rem;
+  }
+
+  .home-orbe {
+    align-self: flex-end;
+  }
+
+  .home-data {
+    padding-bottom: 2rem;
+  }
+  .logos-container {
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+  }
+
+  .value-container,
+  .contact-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .contact-images {
+    order: 1;
+  }
+
+  .contact-card {
+    justify-content: initial;
+  }
+
+  .subscribe-container {
+    padding: 3rem 13rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+}
 
 /* For large devices */
+@media screen and (min-width: 1023px) {
+  .section {
+    padding: 7.5rem 0 1 rem;
+  }
+  .section-title {
+    font-size: 2.25rem;
+  }
+  .section-subtitle {
+    font-size: var(--normal-font-size);
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav-menu {
+    width: initial;
+    margin-left: auto;
+  }
+  .nav-list {
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav-link {
+    color: var(--text-color-light);
+  }
+  .nav-link i {
+    display: none;
+  }
+  .nav-button {
+    display: inline-block;
+  }
+
+  .active-link {
+    background: none;
+    box-shadow: none;
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+  }
+
+  .change-theme {
+    margin: 0 3rem;
+    color: var(--text-color-light);
+  }
+
+  .scroll-header .nav-link,
+  .scroll-header .change-theme {
+    color: var(--text-color);
+  }
+  .scroll-header .active-link {
+    color: var(--first-color);
+  }
+
+  .home {
+    padding-bottom: 0;
+  }
+  .home-container {
+    padding-top: 5rem;
+    column-gap: 2rem;
+  }
+  .home-data {
+    padding-bottom: 4rem;
+  }
+  .home-title {
+    margin-bottom: 2rem;
+  }
+  .home-description,
+  .home-search {
+    margin-bottom: 3rem;
+  }
+  .home-value {
+    column-gap: 3.5rem;
+  }
+  .home-orbe {
+    width: 504px;
+    height: 611px;
+    border-radius: 256px 256px 0 0;
+  }
+  .home-img {
+    width: 472px;
+    height: 634px;
+    border-radius: 236px 236px 12px 12px;
+    bottom: -2.5rem;
+  }
+
+  .logos-img img {
+    height: 100px;
+  }
+
+  .popular-container {
+    padding-top: 3rem;
+  }
+  .popular-card {
+    width: 320px;
+    padding: 0.75rem 0.75rem 2rem;
+  }
+  .popular-data {
+    padding: 0 0.25rem 0 0.75rem;
+  }
+
+  .value-container,
+  .contact-container {
+    align-items: flex-start;
+    column-gap: 5rem;
+  }
+  .value-orbe,
+  .contact-orbe {
+    width: 501px;
+    height: 614px;
+    border-radius: 258px 258px 16px 16px;
+  }
+  .value-img,
+  .contact-img {
+    width: 416px;
+    height: 601px;
+    border-radius: 238px 238px 12px 12px;
+  }
+  .value-img img,
+  .contact-img img {
+    max-width: initial;
+    width: 490px;
+  }
+  .value-description,
+  .contact-description {
+    font-size: var(--normal-font-size);
+    margin-bottom: 2.5rem;
+  }
+  .value-accordion-title {
+    font-size: var(--normal-font-size);
+  }
+  .value-accordion-item {
+    padding: 1.25rem 1.25rem 1.25rem 1rem;
+  }
+  .value-accordion-description {
+    padding-bottom: 1rem;
+    font-size: var(--small-font-size);
+  }
+
+  .contact-card {
+    grid-template-columns: repeat(2, 200px);
+  }
+  .contact-card-box {
+    padding: 28px 1.5rem 1.5rem;
+  }
+
+  .subscribe-container {
+    padding: 4rem 10rem 4.5rem;
+    border-radius: 2rem;
+    border: 12px solid var(--first-color-light);
+  }
+  .subscribe-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .subscribe-description {
+    font-size: var(--normal-font-size);
+    padding: 0 8rem;
+  }
+  .subscribe-button {
+    font-size: var(--normal-font-size);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(4, max-content);
+  }
+  .footer-title {
+    margin-bottom: 1.5rem;
+  }
+  .footer-link {
+    row-gap: 1rem;
+  }
+  .footer-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+
+  .show-scroll {
+    bottom: 3rem;
+    right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  column-gap: 4rem;
+}
 
 /* For 2K & 4K resolutions */
+@media screen and (min-width: 2048px) {
+  body {
+    zoom: 1.5;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  body {
+    zoom: 2;
+  }
+}
