@@ -345,6 +345,7 @@ body.dark-theme {
   border-color: var(--body-color);
   color: var(--text-color);
   margin: 0.5rem;
+  background-color: var(--body-color);
 }
 
 .home-search-input::placeholder {
