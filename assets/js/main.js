@@ -132,7 +132,7 @@ const sr = ScrollReveal({
 sr.reveal(
   ".home-title, .popular-container, .subscribe-container, .footer-container "
 );
-sr.reveal(".home-desctiption, .footer-info", { delay: 500 });
+sr.reveal(".home-description, .footer-info", { delay: 500 });
 sr.reveal(".home-search", { delay: 600 });
 sr.reveal(".home-value", { delay: 700 });
 sr.reveal(".home-images", { delay: 800, origin: "bottom" });
